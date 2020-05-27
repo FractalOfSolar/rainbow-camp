@@ -22,9 +22,8 @@ img
     display: block;
 }
 
-.small_spot_image,
 .wide_photo_caption,
-.food_menu_small
+.content_text.small_only
 {
     display: none;
 }
@@ -57,7 +56,7 @@ img
 
 .content_title.block_title
 {
-    margin: 0 0 16px;
+    margin: 0 0 16px -3px;
 }
 
 .content_text
@@ -113,7 +112,6 @@ img
 .main_info_section .video_wrapper,
 .dancing_section .video_wrapper
 {
-    max-width: 800px;
     padding-bottom: 56.25%;
 }
 
@@ -263,7 +261,7 @@ img
 /* 15 minutes notice */
 .notice_15_minutes
 {
-    width: 160px;
+    width: 162px;
     flex-shrink: 0;
     margin-top: -7px;
 }
@@ -271,7 +269,7 @@ img
 .notice_15_minutes .fifteen_minutes
 {
     display: block;
-    margin-left: 9px;
+    margin: 16px 0 8px 35px;
 }
 
 .notice_15_minutes .minutes_text
@@ -281,6 +279,7 @@ img
     font-size: 17px;
     line-height: 20px;
     margin: 0;
+    margin-right: -5px;
     text-align: center;
 }
 
@@ -289,6 +288,7 @@ img
     text-align: center;
     font-size: 16px;
     line-height: 20px;
+    margin-right: -5px;
 }
 
 /* Different shifts */
@@ -395,27 +395,29 @@ img
 .small_orange_spot
 {
     padding: 74px 58px 50px 73px;
-    width: 305px;
-    height: 314px;
+    /* width: 305px; */
+    width: 289px;
+    /* height: 314px; */
+    height: 289px;
     background: url('../images/orange-spot.png') no-repeat;
     position: absolute;
-    bottom: -139px;
-    left: 167px;
+    bottom: -137px;
+    left: 183px;
 }
 
 .icon_bottle
 {
-    width: 48px;
-    height: 98px;
-    margin: 0 0 9px 59px;
+    width: 50px;
+    height: 99px;
+    margin: -1px 0 9px 58px;
     background: url('../images/icon-bottle.svg') no-repeat;
 }
 
 .icon_washing_hands
 {
-    width: 74px;
-    height: 80px;
-    margin: 0 0 19px 39px;
+    width: 75px;
+    height: 81px;
+    margin: -25px 0 19px 39px;
     background: url('../images/icon-hand.svg') no-repeat;
 }
 
@@ -670,6 +672,7 @@ img
     top: 98px;
     left: 61px;
     line-height: 37px;
+    width: 220px;
 }
 
 .teachers_section .leader_description
@@ -898,14 +901,13 @@ img
 
 .docs
 {
+    width: 140px;
     padding-top: 6px;
 }
 
 .docs .med .doc_image
 {
     display: block;
-    width: 140px;
-    height: 197px;
     border: 1px solid #e1e1e1;
     margin-bottom: 5px;
 }
@@ -1311,6 +1313,862 @@ img
     max-width: none;
 }
 
+@media screen and (min-width: 1281px)
+{
+    .main_info_section
+    {
+        margin-top: -50px;
+    }
+
+    .content_wrapper
+    {
+        max-width: 1040px;
+    }
+
+    .content_title
+    {
+        font-size: 38px;
+        margin: 0 0 27px;
+    }
+
+    .content_text
+    {
+        font-size: 21px;
+        line-height: 27px;
+        margin: 0 0 27px;
+    }
+
+    .details_wrapper .content_text
+    {
+        margin: 0 0 31px;
+    }
+
+    .text_part
+    {
+        max-width: 735px;
+    }
+
+    .notice_15_minutes
+    {
+        width: 182px;
+    }
+
+    .notice_15_minutes .fifteen_minutes
+    {
+        margin: 0;
+        margin-left: 14px;
+        margin-bottom: 4px;
+    }
+
+    .notice_15_minutes .minutes_text,
+    .notice_15_minutes .trip_details_text
+    {
+        font-size: 18px;
+        line-height: 23px;
+        margin-right: 0;
+    }
+
+    .video_caption
+    {
+        font-size: 18px;
+        line-height: 23px;
+        margin-top: 10px;
+    }
+
+    .main_info_section
+    {
+        margin-bottom: 101px;
+    }
+
+    .content_text.limited_with
+    {
+        max-width: 752px;
+    }
+
+    .different_shifts
+    {
+        margin-bottom: 55px;
+    }
+
+    .photo_caption
+    {
+        font-size: 18px;
+        line-height: 23px;
+        margin-top: 8px;
+    }
+
+    .content_title.block_title
+    {
+        margin: 0 0 20px -3px;
+    }
+
+    .details_with_photo .details_wrapper
+    {
+        width: 400px;
+        padding-top: 80px;
+    }
+
+    .new_skills_title
+    {
+        font-size: 21px;
+        line-height: 27px;
+    }
+
+    .details_with_photo .photo_wrapper
+    {
+        width: 476px;
+    }
+
+    .belt_image
+    {
+        margin-top: 52px;
+        margin-left: -97px;
+    }
+
+    .belt_description
+    {
+        font-size: 18px;
+        line-height: 23px;
+        width: 195px;
+        top: 170px;
+        left: 251px;
+    }
+
+    .shifts_section
+    {
+        padding-bottom: 78px;
+    }
+
+    .photo_caption.limited_width
+    {
+        width: 475px;
+    }
+
+    .details_with_photo.dancing
+    {
+        margin-top: -36px;
+    }
+
+    .details_with_photo.dancing .photo_wrapper
+    {
+        margin-right: 48px;
+    }
+
+    .details_with_photo.dancing .details_wrapper
+    {
+        padding-top: 103px;
+    }
+
+    .dress_image
+    {
+        margin-top: -66px;
+        margin-left: 163px;
+    }
+
+    .dress_description
+    {
+        width: 206px;
+        top: 214px;
+        left: 59px;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .friendship_section
+    {
+        padding-top: 136px;
+        margin-bottom: 2px;
+    }
+
+    .national_belt_image
+    {
+        margin-top: -44px;
+        margin-left: -120px;
+    }
+
+    .national_belt_description
+    {
+        width: 182px;
+        top: 118px;
+        left: 97px;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .comfort_section .content_text
+    {
+        max-width: 680px;
+    }
+
+    .icon_bottle
+    {
+        width: 64px;
+        height: 132px;
+        margin: 0 0 9px 59px;
+        background: url(../images/icon-bottle.svg) no-repeat;
+    }
+
+    .icon_washing_hands
+    {
+        width: 95px;
+        height: 103px;
+        margin: 0 0 22px 34px;
+        background: url(../images/icon-hand.svg) no-repeat;
+    }
+
+    .small_orange_spot
+    {
+        padding: 76px 59px 23px 104px;
+        width: 372px;
+        height: 372px;
+        background: url(../images/orange-spot-wide.png) no-repeat;
+        bottom: -168px;
+        left: 350px;
+    }
+
+    .small_purple_spot
+    {
+        padding: 77px 58px 50px 106px;
+        width: 367px;
+        height: 381px;
+        background: url(../images/purple-spot-wide.png) no-repeat;
+        bottom: -175px;
+        left: 343px;
+    }
+
+    .spot_text
+    {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .comfort_section .content_wrapper
+    {
+        margin-bottom: 54px;
+    }
+
+    .wide_photo_wrapper
+    {
+        max-width: 1920px;
+    }
+
+    .wide_photo_wrapper.bottom
+    {
+        margin: 37px auto 0;
+    }
+
+    .comfort_section
+    {
+        margin-bottom: 254px;
+    }
+
+    .friendship_section .details_wrapper
+    {
+        width: 460px;
+        padding-top: 79px;
+    }
+
+    .small_blue_spot
+    {
+        padding: 81px 47px 10px 122px;
+        width: 407px;
+        height: 406px;
+        background: url(../images/blue-spot-wide.png) no-repeat;
+        top: 14px;
+        right: -80px;
+    }
+
+    .food_menu_section .description
+    {
+        width: 640px;
+    }
+
+    .sticker_wrapper
+    {
+        right: -16px;
+        top: -16px;
+        width: 407px;
+    }
+
+    .food_menu_section .menu_wrapper
+    {
+        margin-top: 28px;
+    }
+
+    .adventures_section .description
+    {
+        width: 700px;
+    }
+
+    .adventures_section .notice
+    {
+        width: 220px;
+    }
+
+    .food_menu_section
+    {
+        margin-bottom: 119px;
+    }
+
+    .adventures_section .notice_image
+    {
+        margin-top: -65px;
+        margin-left: -30px;
+    }
+
+    .adventures_section .notice_description
+    {
+        font-size: 18px;
+        line-height: 23px;
+        margin-top: -37px;
+    }
+
+    .adventures_section
+    {
+        margin-bottom: 27px;
+    }
+
+    .reconstruction_section
+    {
+        margin-bottom: 57px;
+    }
+
+    .painting_section .painting
+    {
+        width: 490px;
+    }
+
+    .picture_frame
+    {
+        margin-bottom: 40px;
+    }
+
+    .photo_caption.application_caption
+    {
+        line-height: 23px;
+    }
+
+    .painting .photo_caption
+    {
+        max-width: 280px;
+    }
+
+    .painting_section .theater
+    {
+        margin-left: -95px;
+        margin-top: -17px;
+    }
+
+    .painting_section .theater .photo_caption
+    {
+        left: -21px;
+        bottom: 302px;
+        width: 310px;
+    }
+
+    .painting_section
+    {
+        margin-bottom: 11px;
+    }
+
+    .activities_section .splash
+    {
+        width: 575px;
+        height: 472px;
+        bottom: -27px;
+        left: -214px;
+        background: url(../images/splash-wide.png) no-repeat;
+    }
+
+    .activities_section
+    {
+        margin-bottom: 83px;
+    }
+
+    .music_section .music .photo_caption
+    {
+        width: 310px;
+    }
+
+    .music_section .music
+    {
+        width: 660px;
+    }
+
+    .music_section .music img
+    {
+        margin-left: -54px;
+        margin-top: 29px;
+    }
+
+    .music_section .cartoons
+    {
+        width: 302px;
+    }
+
+    .music_section .cartoons img
+    {
+        margin: -21px 0 12px -36px;
+    }
+
+    .lego
+    {
+        width: 498px;
+        height: 512px;
+        bottom: -115px;
+        right: -239px;
+        background: url(../images/lego-wide.png) no-repeat;
+    }
+
+    .block_with_background.robotics
+    {
+        margin-bottom: 0;
+    }
+
+    .teachers_section .content_wrapper
+    {
+        max-width: 1540px;
+    }
+
+    .teachers_section
+    {
+        background: url(../images/bg-teachers-wide.jpg) no-repeat bottom center;
+        margin-bottom: 124px;
+        padding-top: 40px;
+        margin-top: -27px;
+    }
+
+    .teachers_section .content_title
+    {
+        top: 124px;
+        left: 61px;
+        line-height: 44px;
+    }
+
+    .teachers_section .photo_caption
+    {
+        font-size: 21px;
+        line-height: 27px;
+        margin-bottom: 26px;
+    }
+
+    .teachers_section .leader_description
+    {
+        top: 354px;
+        width: 290px;
+    }
+
+    .teachers_section .teacher_description
+    {
+        position: absolute;
+        right: 9px;
+        top: 353px;
+        width: 335px;
+    }
+
+    .leader_name,
+    .teacher_name
+    {
+        font-size: 18px;
+    }
+
+    .teachers_section .leader_name
+    {
+        bottom: 43px;
+    }
+
+    .teachers_section .teacher_name
+    {
+        width: 260px;
+        right: 79px;
+        bottom: 43px;
+    }
+
+    .mosquito_icon
+    {
+        width: 161px;
+        height: 160px;
+        background: url(../images/icon-mosquito-wide.png) no-repeat;
+        margin-bottom: 21px;
+    }
+
+    .first_aid_icon
+    {
+        width: 158px;
+        height: 159px;
+        background: url(../images/icon-first-aid-post-wide.png) no-repeat;
+        margin-bottom: 21px;
+        margin-left: -8px;
+    }
+
+    .guard_icon
+    {
+        width: 165px;
+        height: 158px;
+        background: url(../images/icon-guard-wide.png) no-repeat;
+        margin-bottom: 21px;
+        margin-left: -8px;
+    }
+
+    .safety_feature_text, .safety_feature_title
+    {
+        font-size: 21px;
+        line-height: 27px;
+    }
+
+    .safety_features
+    {
+        margin-top: 68px;
+    }
+
+    .mosquito
+    {
+        width: 270px;
+        margin-right: 57px;
+    }
+
+    .first_aid
+    {
+        width: 323px;
+    }
+
+    .guard
+    {
+        width: 302px;
+    }
+
+    .safety_section
+    {
+        margin-bottom: 158px;
+    }
+
+    .map_section
+    {
+        max-width: 1100px;
+        padding: 57px 51px 54px;
+        margin: 0 auto 125px;
+    }
+
+    .map_wrapper
+    {
+        margin-top: 53px;
+        margin-bottom: 25px;
+    }
+
+    .map_details_name
+    {
+        font-size: 24px;
+        width: 196px;
+    }
+
+    .map_details_title
+    {
+        font-size: 18px;
+        line-height: 21px;
+        margin: 5px 0 0;
+    }
+
+    .map_details_subtitle
+    {
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0 0 10px;
+    }
+
+    .by_car
+    {
+        width: 186px;
+    }
+
+    .by_bus
+    {
+        width: 230px;
+    }
+
+    .map_details_description
+    {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .question_title
+    {
+        font-size: 21px;
+        line-height: 27px;
+    }
+
+    .question_answer,
+    .list_item
+    {
+        font-size: 21px;
+        line-height: 29px;
+        margin: 0 0 29px;
+    }
+
+    .questions
+    {
+        width: 790px;
+    }
+
+    .docs
+    {
+        width: 164px;
+    }
+
+    .faq_section .content_title
+    {
+        margin-bottom: 33px;
+    }
+
+    .question_answer.last
+    {
+        margin: 0 0 48px;
+    }
+
+    .questions_list
+    {
+        padding-left: 76px;
+    }
+
+    .block_with_background.girl_jumping_wrapper
+    {
+        background: url(../images/bg-footer-wide.jpg) no-repeat bottom center;
+    }
+
+    .faq_section
+    {
+        margin-bottom: 359px;
+    }
+
+    .order_section
+    {
+        max-width: 1080px;
+        margin: 0 auto 300px;
+    }
+
+    .form_image
+    {
+        top: -243px;
+        right: -134px;
+    }
+
+    .order_section .content_title
+    {
+        margin-bottom: 28px;
+    }
+
+    .order_section .content_text
+    {
+        margin: 0;
+        font-size: 21px;
+        line-height: 27px;
+    }
+
+    .order_section .order_features_list
+    {
+        max-width: 390px;
+        margin-bottom: 96px;
+    }
+
+    .order_section .order_features_list li
+    {
+        margin-bottom: 9px;
+        font-size: 21px;
+        line-height: 27px;
+    }
+
+    .order_form .form_input,
+    .order_form .submit_button
+    {
+        line-height: 66px;
+        width: 388px;
+        font-size: 21px;
+        margin-bottom: 13px;
+        padding: 0 24px;
+    }
+
+    .order_section .form_notice
+    {
+        font-size: 18px;
+        width: 390px;
+    }
+
+    .horizontal_line
+    {
+        width: 1000px;
+        margin-top: -23px;
+    }
+
+    .copyright, .copyright span
+    {
+        font-size: 17px;
+        line-height: 22px;
+        margin: 0 0 1px;
+    }
+
+    .phones_wrapper
+    {
+        margin-right: 49px;
+        width: 300px;
+    }
+
+    .phone
+    {
+        margin: 0 0 2px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .call_details
+    {
+        font-size: 15px;
+    }
+
+    .developers
+    {
+        width: 360px;
+        margin-right: 203px;
+    }
+
+    .developers_list
+    {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .bureau
+    {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .map_section_spot
+    {
+        width: 378px;
+        height: 378px;
+        background: url(../images/red-spot-wide.png) no-repeat;
+        top: -65px;
+        right: 95px;
+        font-size: 18px;
+        line-height: 23px;
+        padding: 151px 32px 108px 123px;
+    }
+
+    .blue_spot
+    {
+        width: 1284px;
+        top: -34px;
+        transform: translateX(-8.5%);
+    }
+
+    .purple_spot
+    {
+        width: 1737px;
+        top: -49px;
+        transform: translateX(-72.0%);
+    }
+
+    .yellow_spot
+    {
+        width: 1408px;
+        top: -87px;
+        transform: translateX(-13.1%);
+    }
+
+    .play_button
+    {
+        width: 167px;
+        height: 167px;
+    }
+
+    .video_duration
+    {
+        font-size: 24px;
+    }
+
+    .details_with_photo
+    {
+        margin-top: -13px;
+    }
+
+    .question_answer.before_next_question
+    {
+        margin-bottom: 33px;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    .teachers_section .content_title,
+    .teachers_section .leader_description,
+    .teachers_section .leader_name
+    {
+        left: 20px;
+    }
+
+    .teachers_section .teacher_description
+    {
+        right: 20px;
+        top: 185px;
+    }
+
+    .teachers_section .teacher_name
+    {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    .teachers_section
+    {
+        background-position: top center;
+        padding-top: 220px;
+
+    }
+
+    .teachers_section_description
+    {
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .teachers_section .content_title
+    {
+        position: static;
+        width: 100%;
+        max-width: 520px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .teachers_section .leader_description,
+    .teachers_section .teacher_description
+    {
+        position: static;
+        width: 50%;
+    }
+
+    .teachers_section .leader_description
+    {
+        margin-right: 50px;
+    }
+
+    .teachers_section .leader_name,
+    .teachers_section .teacher_name
+    {
+        display: none;
+    }
+
+    .teachers_section .content_title
+    {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
 @media screen and (max-width: 1000px)
 {
     .lego
@@ -1343,6 +2201,21 @@ img
     {
         display: none;
     }
+
+    .painting_section .theater
+    {
+        margin-top: 100px;
+    }
+
+    .painting_section .theater img
+    {
+        max-width: 100%;
+    }
+
+    .adventures_section .notice_description
+    {
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 920px)
@@ -1368,25 +2241,37 @@ img
 
 @media screen and (max-width: 880px)
 {
-    .teachers_section .leader_description
-    {
-        width: 185px;
-    }
-
-    .teachers_section .teacher_description
-    {
-        right: 45px;
-        width: 175px;
-    }
-
-    .painting_section .theater
-    {
-        margin-top: 100px;
-    }
-
     .sticker_wrapper
     {
         display: none;
+    }
+
+    .content_text.small_only
+    {
+        display: block;
+    }
+
+    .food_menu_section .description
+    {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .footer_section
+    {
+        position: relative;
+    }
+
+    .horizontal_line
+    {
+        width: auto;
+        left: 20px;
+        right: 20px;
+    }
+
+    .main_info_section
+    {
+        margin-top: 0;
     }
 }
 
@@ -1445,7 +2330,7 @@ img
     .purple_spot
     {
         width: 750px;
-        top: -135px;
+        top: -35px;
         transform: translateX(0.4%);
     }
 
@@ -1523,13 +2408,19 @@ img
 
     .form_image
     {
-        top: 0;
-        max-width: 60%;
+        display: none;
     }
 
     .jumping_girl_shadow
     {
         display: none;
+    }
+
+    .painting_section .theater .photo_caption
+    {
+        left: -30px;
+        bottom: 150px;
+        width: 210px;
     }
 }
 
@@ -1577,6 +2468,24 @@ img
     .questions
     {
         margin-right: 0;
+    }
+
+    .painting_section .painting
+    {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .painting picture
+    {
+        width: 50%;
+        margin-right: 15px;
+    }
+
+    .painting .photo_caption
+    {
+        margin-top: 35px;
     }
 }
 
@@ -1749,13 +2658,13 @@ img
         display: flex;
         width: 100%;
         align-items: center;
+        flex-direction: row-reverse;
     }
 
     .adventures_section .notice_image
     {
         margin: 0;
         order: 2;
-        width: 50%;
         margin-top: -15px;
     }
 
@@ -1796,15 +2705,10 @@ img
         align-items: center;
     }
 
-    .music_section .cartoons img
-    {
-        max-width: 50%;
-    }
-
     .music_section .cartoons .photo_caption
     {
         padding: 0 15px 0 0;
-        width: auto;
+        width: 60%;
     }
 
     .music_section .music .photo_caption
@@ -1872,25 +2776,21 @@ img
 
 @media screen and (max-width: 480px)
 {
-    body
+    body,
+    html
     {
         overflow-x: hidden;
+    }
+
+    .shifted_image_block
+    {
+        display: none;
     }
 
     .block_with_background,
     .block_with_background.friendship_section
     {
         overflow-x: visible;
-    }
-
-    .small_spot_image
-    {
-        display: block;
-    }
-
-    .big_spot_image
-    {
-        display: none;
     }
 
     .content_wrapper
@@ -1922,7 +2822,11 @@ img
         font-size: 16px;
         line-height: 21px;
         margin: 0 0 16px;
-        max-width: 280px;
+    }
+
+    .text_part
+    {
+        margin-right: 0;
     }
 
     .safety_feature_text,
@@ -2012,7 +2916,7 @@ img
 
     .content_title.block_title
     {
-        margin: 0 0 14px;
+        margin: 0 0 14px -3px;
     }
 
     .different_shifts
@@ -2057,14 +2961,8 @@ img
         left: 108px;
     }
 
-    .food_menu_large
+    .food_menu_image
     {
-        display: none;
-    }
-
-    .food_menu_small
-    {
-        display: block;
         margin-top: 10px;
     }
 
@@ -2077,11 +2975,6 @@ img
     {
         display: flex;
         width: 100%;
-    }
-
-    .picture_frame
-    {
-        width: 60%;
     }
 
     .photo_caption.application_caption
@@ -2159,6 +3052,25 @@ img
     {
         flex-shrink: 0;
     }
+
+    .teachers_section_description
+    {
+        display: block;
+    }
+
+    .teachers_section .content_title,
+    .teachers_section .leader_description,
+    .teachers_section .teacher_description
+    {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .order_section
+    {
+        margin-bottom: 75px;
+    }
 }
 
 @media screen and (max-width: 440px)
@@ -2233,11 +3145,6 @@ img
     .painting_section .painting
     {
         margin-bottom: 20px;
-    }
-
-    .picture_frame
-    {
-        width: 40%;
     }
 
     .photo_caption.application_caption

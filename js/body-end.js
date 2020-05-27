@@ -94,11 +94,11 @@ if (isEnvBrowser) {
             const { action: url, method } = form;
             const data = {};
 
-            for (const input of document.querySelectorAll('input')) {
-                data[input.name] = input.value;
+            for (const { name, value } of document.querySelectorAll('input')) {
+                data[name] = value;
             }
 
-            const fetchWorker = new Worker('js/fetch-worker.js');
+            const fetchWorker = new Worker('js/fetch-form-via-worker.js');
             // Worker is needed to prevent redirection on fetch response
             // FIXME: try iframe instead.
 
