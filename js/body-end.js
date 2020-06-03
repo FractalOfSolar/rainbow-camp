@@ -35,8 +35,6 @@ if (isEnvBrowser) {
     
     
     for (const { poster, domElement } of videos) {
-        console.dir(poster);
-        console.dir(domElement);
         domElement.addEventListener('click', () => {
             if (domElement.classList.contains(CLASS_CUSTOM_PLAY_BUTTON)) {
                 domElement.classList.remove(CLASS_CUSTOM_PLAY_BUTTON);
@@ -61,22 +59,6 @@ if (isEnvBrowser) {
             if (makeTelephoneNumberSimplest(target.value).value === TEL_CODE_RU) {
                 target.value = '';
             }
-        });
-
-        // tmp:
-        input.addEventListener('input', event => {
-            console.dir(event);
-        });
-        input.addEventListener('focus', event => {
-            console.dir(event);
-        });
-        input.addEventListener('keypress', event => {
-            console.dir(event);
-        });
-        input.addEventListener('keydown', event => {
-            console.log();
-            console.dir(event);
-            console.dir(event.target.value);
         });
     }
 
@@ -107,11 +89,22 @@ if (isEnvBrowser) {
             
             fetchWorker.onmessage = (e) => {
                 const { data: { completed } } = e;
-                // "completed" don't means success
+                
+                // NOTE: "completed" don't means success.
+                // Request fetching with no-cors
+                // so we can not to know response status
+                // Google-form should to return status 200.
+
+                // ВАЖНО: "completed" не означает успех.
+                // Запрос посылается в режиме no-cors,
+                // так что мы не можем знать статус ответа.
+                // По идее, Гугл-форма должна всегда возвращать 200.
                 
                 form.classList.remove(CLASS_LOADING);
+
                 if (completed) {
                     form.classList.add(CLASS_COMPLETED);
+                    dataLayer.push({'event': 'form-submit'});
                 }
             };
 
@@ -148,8 +141,6 @@ if (isEnvBrowser) {
  *     ? Пауза длиннее средней паузы между набором цифр
  */
 function formatTelephoneNumberInput(event) {
-    console.log('formatTelephoneNumberInput()');
-    
     const { type } = event;
 
     // if (type === 'keypress') {
@@ -206,10 +197,6 @@ function formatTelephoneNumberInput(event) {
                 target.setRangeText(value.slice(cursorPos), 0, target.value.length, 'end');
                 target.setRangeText(value.slice(0, cursorPos), 0, 0, 'end');
             });
-            
-            console.log(`shift = ${shift}`);
-            console.log(value.slice(0, cursorPos));
-            console.log(value.slice(cursorPos));
         }
 
         if (key === 'Delete') {
@@ -224,13 +211,6 @@ function formatTelephoneNumberInput(event) {
         target.setRangeText(value.slice(0, cursorPos), 0, 0, 'end');
         // Setting in two steps to set cursor in middle of inserted text.
 
-        console.log(value.slice(0, cursorPos));
-        console.log(value.slice(cursorPos));
-        
-        console.log(`cursorPos = ${cursorPos}`);
-        console.log(`selectionStart = ${selectionStart}`);
-        // console.log(`cursorShift = ${cursorShift}`);
-        
         if (type === 'focus') {
             setTimeout(() => {
                 target.setSelectionRange(cursorPos, cursorPos);
@@ -265,16 +245,11 @@ function formatTelephoneNumberInput(event) {
     //         );
     //         target.setRangeText(value.slice(cursorPos), 0, target.value.length, 'end');
     //         target.setRangeText(value.slice(0, cursorPos), 0, 0, 'end');
-            
-    //         console.log(`shift = ${shift}`);
-    //         console.log(value.slice(0, cursorPos));
-    //         console.log(value.slice(cursorPos));
     //     }
 
     //     // target.value = formatTelephoneNumber(simplest.value.slice(0, simplest.value.length - 1)).value;
 
     //     // setTimeout(() => {
-    //     //     console.log('setSelectionRange (del)');
     //     //     target.setSelectionRange(target.selectionStart, target.selectionStart);
     //     // });
     // }
@@ -327,8 +302,6 @@ function makeTelephoneNumberSimplest(tel, breakpoints = []) {
  * Format telephone number and get new cursor position.
  */
 function formatTelephoneNumber(number, selectionStart, cursorAtEnd) {
-    console.log('formatTelephoneNumber()');
-
     const PLACE_FOR_DIGIT = '_';
 
     const simplest = makeTelephoneNumberSimplest(number, [selectionStart]);
@@ -356,20 +329,17 @@ function formatTelephoneNumber(number, selectionStart, cursorAtEnd) {
     for (const [prefix, { length }] of mobilePhoneParts) {
         const part = number.slice(start, start += length);
         const partWithPrefix = prefix + part;
-        // console.log(`part = ${part}`);
 
         const emptyPlaces = length - part.length;
         value += partWithPrefix + PLACE_FOR_DIGIT.repeat(emptyPlaces);
 
         if (part || previousIsComplete) {
             cursorPos = value.length - emptyPlaces;
-            console.log(`cursorPos = ${cursorPos}`);
         }
 
         if (!part && previousIsComplete) {
             // NOTE: "start" in condition means "end". FIXME
             cursorShift = prefix.length;
-            console.log(`cursorShift = ${cursorShift}`);
         }
         previousIsComplete = !emptyPlaces;
 
