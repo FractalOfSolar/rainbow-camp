@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Радужный — Загородный детский образовательный центр</title>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
   <!-- Google Tag Manager -->
   <script>
@@ -30,13 +32,31 @@
     ></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
+  <div class="top_menu_wrapper" id="topMenuWrapper">
+    <ul class="top_menu" id="topMenu">
+      <li><a href="#about" class="top_menu_link">О лагере</a></li>
+      <li><a href="#shifts" class="top_menu_link">Смены</a></li>
+      <li><a href="#accommodations" class="top_menu_link">Условия проживания</a></li>
+      <li><a href="#entertainment" class="top_menu_link">Развлечения</a></li>
+      <li><a href="#location" class="top_menu_link">Расположение</a></li>
+      <li><a href="#buyTicket" class="top_menu_button">Купить путёвку</a></li>
+    </ul>
+  </div>
 
 <div class="top_block">
-  <img src="images/top-image.jpg"
-    alt="Коллаж с воспитанниками загородного центра детского творчества «Радужный». Мальчик снимает видео. Другой мальчик поет. Девочка показывает движение из гимнастики. Группа воспитанников синхронно прыгает. Два ребёнка в кимоно: девочка делает удар ногой, мальчик обивает. Дети на празднике красок бросаются друг в друга цветным порошком. Девочка жонглирует булавами. Мальчик целится из пейнтбольного ружья.">
+  <picture>
+    <source srcset="images/collage-small.jpg 1x, images/collage-small-2x.jpg 2x" media="(max-width: 600px)">
+    <source srcset="images/collage-medium.jpg 1x, images/collage-medium-2x.jpg 2x" media="(max-width: 1280px)">
+    <img src="images/wide/collage.jpg" srcset="images/wide/collage.jpg 1x, images/wide/collage-2x.jpg 2x"
+         alt="Коллаж с воспитанниками загородного центра детского творчества «Радужный». Мальчик снимает видео. Другой мальчик поет. Девочка показывает движение из гимнастики. Группа воспитанников синхронно прыгает. Два ребёнка в кимоно: девочка делает удар ногой, мальчик обивает. Дети на празднике красок бросаются друг в друга цветным порошком. Девочка жонглирует булавами. Мальчик целится из пейнтбольного ружья.">
+  </picture>
 </div>
 
-<div class="content_wrapper main_info_section">
+<div class="content_wrapper">
+  <button class="go_to_order" id="goToOrder">Купить путёвку</button>
+</div>
+
+<div class="content_wrapper main_info_section" id="about">
   <h2 class="content_title">Дворец творчества <span class="nobr">на природе</span></h2>
   <div class="block_with_notice">
     <div class="text_part">
@@ -60,8 +80,9 @@
     </div>
     <div class="notice_15_minutes">
       <picture>
-        <source srcset="images/15-small.png 1x" media="(max-width: 600px) ">
-        <source srcset="images/15.png 1x" media="(max-width: 1280px) ">
+        <source srcset="images/15-small.png 1x, images/15-small-2x.png 2x" media="(max-width: 600px) ">
+        <source srcset="images/15.png 1x, images/15-2x.png 2x" media="(max-width: 1280px) ">
+        
         <img src="images/wide/15.png" srcset="images/wide/15.png 1x, images/wide/15-2x.png 2x" alt="15" class="fifteen_minutes">
       </picture>
       <p class="minutes_text">минут</p>
@@ -89,7 +110,7 @@
   </div>
 </div>
 
-<div class="block_with_background shifts_section">
+<div class="block_with_background shifts_section" id="shifts">
   <div class="content_wrapper different_shifts">
     <h2 class="content_title">Разные смены — <span class="nobr">разные занятия</span></h2>
     <p class="content_text limited_with">
@@ -109,17 +130,33 @@
 
   <div class="content_wrapper">
     <h3 class="content_title block_title">Смена «Спортивный калейдоскоп»</h3>
-    <picture>
-      <source srcset="images/photo/self-defense.jpg 1x, images/photo/self-defense-2x.jpg 2x" media="(max-width: 1280px) ">
-      <img src="images/photo/wide/self-defense.jpg"
-           srcset="images/photo/wide/self-defense.jpg 1x, images/photo/wide/self-defense-2x.jpg 2x"
-           class="block_image"
-           alt="Показательный бой по тэкэндо."
-      >
-    </picture>
-
-      <div class="photo_caption_wrapper">
+    <div class="spot_holder">
+      <div class="blue_spot">
+        <picture>
+          <source srcset="images/back-blue-small.jpg 1x, images/back-blue-small-2x.jpg 2x" media="(max-width: 600px) ">
+          <source srcset="images/back-blue.jpg 1x" media="(max-width: 1280px) ">
+          <img
+              src="images/back-blue-wide.jpg"
+              srcset="images/back-blue-wide.jpg 1x"
+              alt=""
+          >
+        </picture>
+      </div>
+    </div>
+    <div class="holder horizontal_photo_holder">
+      <picture>
+        <source srcset="images/photo/self-defense.jpg 1x, images/photo/self-defense-2x.jpg 2x"
+                media="(max-width: 1280px) ">
+        <img src="images/photo/wide/self-defense.jpg"
+             srcset="images/photo/wide/self-defense.jpg 1x, images/photo/wide/self-defense-2x.jpg 2x"
+             class="block_image"
+             alt="Показательный бой по тэкэндо."
+        >
+      </picture>
+    </div>
+    <div class="photo_caption_wrapper left">
       <p class="photo_caption">Ребята учатся приёмам самообороны</p>
+      <span class="photo_caption_filler"></span>
     </div>
   </div>
 
@@ -154,46 +191,52 @@
       </div>
     </div>
     <div class="photo_wrapper">
-      <picture>
-        <source srcset="images/photo/gymnastics.jpg 1x, images/photo/gymnastics-2x.jpg 2x" media="(max-width: 1280px) ">
-        <img
-            src="images/photo/gymnastics.jpg"
-            srcset="images/photo/wide/gymnastics.jpg 1x, images/photo/wide/gymnastics-2x.jpg 2x"
-            alt="Девочка-гимнастка делает вертикальный шпагат"
-        >
-      </picture>
+      <div class="holder vertical_photo_holder">
+        <picture>
+          <source srcset="images/photo/gymnastics.jpg 1x, images/photo/gymnastics-2x.jpg 2x" media="(max-width: 1280px) ">
+          <img
+              src="images/photo/gymnastics.jpg"
+              srcset="images/photo/wide/gymnastics.jpg 1x, images/photo/wide/gymnastics-2x.jpg 2x"
+              alt="Девочка-гимнастка делает вертикальный шпагат"
+          >
+        </picture>
+      </div>
       <div class="photo_caption">
         <span class="nobr">На занятиях</span> <span class="nobr">по художественной</span> гимнастике дети делают
         растяжку, танцуют <span class="nobr">с обручем</span> <span class="nobr">и лентами</span>
       </div>
     </div>
   </div>
-  <div class="blue_spot">
-    <picture>
-      <source srcset="images/back-blue-small.jpg 1x" media="(max-width: 600px) ">
-      <source srcset="images/back-blue.jpg 1x" media="(max-width: 1280px) ">
-      <img
-          src="images/back-blue-wide.jpg"
-          srcset="images/back-blue-wide.jpg 1x"
-          alt=""
-      >
-    </picture>
-  </div>
 </div>
 
 <div class="block_with_background dancing_section">
   <div class="content_wrapper">
     <h3 class="content_title block_title">Смена «Танцуй»</h3>
+    <div class="spot_holder">
+      <div class="purple_spot">
+        <picture>
+          <source srcset="images/back-purple-small.jpg 1x, images/back-purple-small-2x.jpg 2x" media="(max-width: 600px) ">
+          <source srcset="images/back-purple.jpg 1x" media="(max-width: 1280px) ">
+          <img
+                  src="images/back-purple-wide.jpg"
+                  srcset="images/back-purple-wide.jpg 1x"
+                  alt=""
+          >
+        </picture>
+      </div>
+    </div>
     <div class="video_wrapper">
-      <iframe class="video_frame"
-              src="https://vk.com/video_ext.php?oid=-96506259&id=171543917&hash=b9db97da0d169333&hd=1" width="640"
-              height="360" frameborder="0" allowfullscreen></iframe>
+      <iframe class="video_frame" width="560" height="315"
+            src="https://www.youtube.com/embed/GwQdsfdSWCI?controls=1"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
       <img class="video_poster" src="" alt="Танцы">
       <span class="play_button"></span>
       <span class="video_duration">2:48</span>
     </div>
     <div class="photo_caption_wrapper right">
-      <p class="photo_caption limited_width">
+      <span class="photo_caption_filler"></span>
+      <p class="photo_caption">
         Дети разучивают танцы, <span class="nobr">а потом</span> снимают <span class="nobr">под них</span> клипы <span
           class="nobr">в живописных</span> местах
       </p>
@@ -202,14 +245,16 @@
 
   <div class="content_wrapper details_with_photo dancing">
     <div class="photo_wrapper">
-      <picture>
-        <source srcset="images/photo/dancing.jpg 1x, images/photo/dancing-2x.jpg 2x" media="(max-width: 1280px) ">
-        <img
-            src="images/photo/dancing.jpg"
-            srcset="images/photo/wide/dancing.jpg 1x, images/photo/wide/dancing-2x.jpg 2x"
-            alt="Девочка показывает балетное движение «батман тандю», стоя на сцене «Радужного»"
-        >
-      </picture>
+      <div class="holder vertical_photo_holder">
+        <picture>
+          <source srcset="images/photo/dancing.jpg 1x, images/photo/dancing-2x.jpg 2x" media="(max-width: 1280px) ">
+          <img
+              src="images/photo/dancing.jpg"
+              srcset="images/photo/wide/dancing.jpg 1x, images/photo/wide/dancing-2x.jpg 2x"
+              alt="Девочка показывает балетное движение «батман тандю», стоя на сцене «Радужного»"
+          >
+        </picture>
+      </div>
       <div class="photo_caption">
         <span class="nobr">В конце</span> <span class="nobr">смены —</span> концерт,
         <span class="nobr">на который</span> приходят родители. Ребята сами продумывают номера
@@ -243,35 +288,40 @@
       </div>
     </div>
   </div>
-  <div class="purple_spot">
-    <picture>
-      <source srcset="images/back-purple-small.jpg 1x" media="(max-width: 600px) ">
-      <source srcset="images/back-purple.jpg 1x" media="(max-width: 1280px) ">
-      <img
-          src="images/back-purple-wide.jpg"
-          srcset="images/back-purple-wide.jpg 1x"
-          alt=""
-      >
-    </picture>
-  </div>
 </div>
 
 <div class="block_with_background friendship_section">
   <div class="content_wrapper">
     <h3 class="content_title block_title">Смена «Хоровод дружбы»</h3>
-    <picture>
-      <source srcset="images/photo/national-song.jpg 1x, images/photo/national-song-2x.jpg" media="(max-width: 1280px) ">
-      <img
-          src="images/photo/national-song.jpg"
-          srcset="images/photo/wide/national-song.jpg 1x, images/photo/wide/national-song-2x.jpg"
-          class="block_image"
-          alt="Хор поет народные песни под аккордеон. Певцы одеты в народные костюмы. В хоре и взрослые, и дети."
-      >
-    </picture>
-    <div class="photo_caption_wrapper">
+    <div class="spot_holder">
+      <div class="yellow_spot">
+        <picture>
+          <source srcset="images/back-yellow-small.jpg 1x, images/back-yellow-small.jpg 2x" media="(max-width: 600px) ">
+          <source srcset="images/back-yellow.jpg 1x" media="(max-width: 1280px) ">
+          <img
+                  src="images/back-yellow-wide.jpg"
+                  srcset="images/back-yellow-wide.jpg 1x"
+                  alt=""
+          >
+        </picture>
+      </div>
+    </div>
+    <div class="holder horizontal_photo_holder">
+      <picture>
+        <source srcset="images/photo/national-song.jpg 1x, images/photo/national-song-2x.jpg" media="(max-width: 1280px) ">
+        <img
+            src="images/photo/national-song.jpg"
+            srcset="images/photo/wide/national-song.jpg 1x, images/photo/wide/national-song-2x.jpg"
+            class="block_image"
+            alt="Хор поет народные песни под аккордеон. Певцы одеты в народные костюмы. В хоре и взрослые, и дети."
+        >
+      </picture>
+    </div>
+    <div class="photo_caption_wrapper left">
       <p class="photo_caption">
         <span class="nobr">Под живую</span> музыку дети поют народные песни
       </p>
+      <span class="photo_caption_filler"></span>
     </div>
   </div>
 
@@ -304,36 +354,28 @@
       </div>
     </div>
     <div class="photo_wrapper">
-      <picture>
-        <source srcset="images/photo/national-dance.jpg 1x, images/photo/national-dance-2x.jpg 2x" media="(max-width: 1280px) ">
-        <img
-            src="images/photo/national-dance.jpg"
-            srcset="images/photo/wide/national-dance.jpg 1x, images/photo/wide/national-dance-2x.jpg 2x"
-            alt="Девочка танцует народный танец на сцене."
-        >
-      </picture>
+      <div class="holder vertical_photo_holder">
+        <picture>
+          <source srcset="images/photo/national-dance.jpg 1x, images/photo/national-dance-2x.jpg 2x"
+                  media="(max-width: 1280px) ">
+          <img
+              src="images/photo/national-dance.jpg"
+              srcset="images/photo/wide/national-dance.jpg 1x, images/photo/wide/national-dance-2x.jpg 2x"
+              alt="Девочка танцует народный танец на сцене."
+          >
+        </picture>
+      </div>
       <div class="photo_caption">
         Пока одни дети поют, <span class="nobr">другие —</span> разучивают
         марийские <span class="nobr">и русские</span> народные танцы
       </div>
     </div>
   </div>
-  <div class="yellow_spot">
-      <picture>
-        <source srcset="images/back-yellow-small.jpg 1x" media="(max-width: 600px) ">
-        <source srcset="images/back-yellow.jpg 1x" media="(max-width: 1280px) ">
-        <img
-            src="images/back-yellow-wide.jpg"
-            srcset="images/back-yellow-wide.jpg 1x"
-            alt=""
-        >
-      </picture>
-  </div>
 </div>
 
-<div class="comfort_section">
+<div class="comfort_section" id="accommodations">
   <div class="content_wrapper">
-    <h3 class="content_title">Комфортные условия</h3>
+    <h2 class="content_title">Комфортные условия</h2>
     <p class="content_text">
       Жилые корпуса отремонтировали <span class="nobr">в 2020</span> году: внутри полностью обновили санузлы <span
         class="nobr">и сделали</span> косметический ремонт <span class="nobr">в комнатах.</span>
@@ -358,7 +400,7 @@
   <div class="wide_photo_wrapper">
     <picture>
       <source srcset="images/photo/beds.jpg 1x" media="(max-width: 1280px) ">
-      <img src="images/photo/beds.jpg" srcset="images/photo/wide/beds.jpg 1x, images/photo/wide/beds-2x.jpg 2x"
+      <img src="images/photo/wide/beds.jpg" srcset="images/photo/wide/beds.jpg 1x, images/photo/wide/beds-2x.jpg 2x"
         alt="Интерьер жилой комнаты для детей. Комната рассчитана на 8 человек."
       >
     </picture>
@@ -370,32 +412,34 @@
   <div class="wide_photo_wrapper bottom">
     <picture>
       <source srcset="images/photo/bathroom.jpg 1x" media="(max-width: 1280px) ">
-      <img src="images/photo/bathroom.jpg" srcset="images/photo/wide/bathroom.jpg 1x, images/photo/wide/bathroom-2x.jpg 2x"
+      <img src="images/photo/wide/bathroom.jpg" srcset="images/photo/wide/bathroom.jpg 1x, images/photo/wide/bathroom-2x.jpg 2x"
         alt="Интерьер санузла: пять закрытых кабинок. Пять умывальников. Над каждым умывальником диспенсер для жидкого мыла."
       >
     </picture>
-    <div class="content_wrapper wide_photo_caption">
-      <p class="photo_caption">В каждом корпусе есть по два санузла с горячей водой</p>
+    <div class="small_orange_spot_holder">
+      <div class="small_orange_spot">
+        <div class="icon_washing_hands"></div>
+        <p class="spot_text">
+          В каждом корпусе
+          <br>
+          есть <span class="nobr">по два</span> санузла
+          <br>
+          <span class="nobr">с горячей</span> водой
+        </p>
+      </div>
     </div>
-    <div class="small_orange_spot">
-      <div class="icon_washing_hands"></div>
-      <p class="spot_text">
-        В каждом корпусе
-        <br>
-        есть <span class="nobr">по два</span> санузла
-        <br>
-        <span class="nobr">с горячей</span> водой
-      </p>
-    </div>
+  </div>
+  <div class="content_wrapper wide_photo_caption">
+    <p class="photo_caption">В каждом корпусе есть по два санузла <span class="nobr">с горячей</span> водой</p>
   </div>
 </div>
 
 <div class="food_menu_section">
   <div class="content_wrapper">
     <div class="description">
-      <h3 class="content_title">Пятиразовое питание</h3>
+      <h2 class="content_title">Пятиразовое питание</h2>
       <p class="content_text">
-        <span class="nobr">В меню — горячие</span> супы, мясо, птицы, рыба, свежие фрукты, напитки, молочные продукты,
+        <span class="nobr">В меню — горячие</span> супы, мясо, птица, рыба, свежие фрукты, напитки, молочные продукты,
         домашняя выпечка. Каждый <span class="nobr">день —</span> новые блюда.
       </p>
       <p class="content_text">
@@ -418,8 +462,8 @@
     </div>
     <div class="menu_wrapper">
       <picture>
-        <source srcset="images/food-menu-small.jpg 1x" media="(max-width: 600px) ">
-        <source srcset="images/food-menu.jpg 1x" media="(max-width: 1280px) ">
+        <source srcset="images/food-menu-small.jpg 1x" media="(max-width: 600px)">
+        <source srcset="images/food-menu.jpg 1x, images/food-menu-2x.jpg 2x" media="(max-width: 1280px)">
         <img
             src="images/wide/food-menu.jpg"
             srcset="images/wide/food-menu.jpg 1x, images/wide/food-menu-2x.jpg 2x"
@@ -431,10 +475,10 @@
   </div>
 </div>
 
-<div class="adventures_section">
+<div class="adventures_section" id="entertainment">
   <div class="content_wrapper">
     <div class="description">
-      <h3 class="content_title">Каждый день новые приключения</h3>
+      <h2 class="content_title">Каждый день новые приключения</h2>
       <p class="content_text">
         <span class="nobr">В первой</span> половине дня дети занимаются <span class="nobr">в профильных</span> кружках.
         Темы кружков зависят <span class="nobr">от профиля</span> смены.
@@ -473,15 +517,17 @@
 </div>
 
 <div class="content_wrapper reconstruction_section">
-  <picture>
-    <source srcset="images/photo/reconstruction.jpg 1x, images/photo/reconstruction-2x.jpg 2x" media="(max-width: 1280px) ">
-    <img
-        src="images/photo/wide/reconstruction.jpg"
-        srcset="images/photo/wide/reconstruction.jpg 1x, images/photo/wide/reconstruction-2x.jpg 2x"
-        class="block_image"
-        alt="Дети с поролоновыми оружием. Один атакует мечом, другой отржает удар щитом."
-    >
-  </picture>
+  <div class="holder horizontal_photo_holder">
+    <picture>
+      <source srcset="images/photo/reconstruction.jpg 1x, images/photo/reconstruction-2x.jpg 2x" media="(max-width: 1280px) ">
+      <img
+          src="images/photo/wide/reconstruction.jpg"
+          srcset="images/photo/wide/reconstruction.jpg 1x, images/photo/wide/reconstruction-2x.jpg 2x"
+          class="block_image"
+          alt="Дети с поролоновыми оружием. Один атакует мечом, другой отржает удар щитом."
+      >
+    </picture>
+  </div>
   <div class="photo_caption_wrapper">
     <p class="photo_caption"><span class="photo_caption_title">Реконструкция.</span> <span class="nobr">В лагерь</span>
       приезжают реконструкторы <span class="nobr">из «Древнерусской</span> богатырской заставы»
@@ -508,6 +554,7 @@
   </div>
   <div class="theater">
     <picture>
+      <source srcset="images/rabbit-small.jpg 1x, images/rabbit-small-x2.jpg 2x" media="(max-width: 600px) ">
       <source srcset="images/rabbit.jpg 1x, images/rabbit-2x.jpg 2x" media="(max-width: 1280px) ">
       <img
           src="images/wide/rabbit.jpg"
@@ -515,7 +562,7 @@
           alt="Девочка с микрофоном в театральном костюме зайца"
       >
     </picture>
-    <p class="photo_caption application_caption">
+    <p class="photo_caption">
       <span class="photo_caption_title single_line">Театральное мастерство</span>
       Дети учатся актёрскому мастерству <span class="nobr">и ораторскому</span> искусству.
       Играют <span class="nobr">в пьесах</span>
@@ -525,30 +572,34 @@
 </div>
 
 <div class="content_wrapper activities_section">
-  <picture>
-    <source srcset="images/photo/paintball.jpg 1x, images/photo/paintball-2x.jpg 2x" media="(max-width: 1280px) ">
-    <img
-        src="images/photo/wide/paintball.jpg"
-        srcset="images/photo/wide/paintball.jpg 1x, images/photo/wide/paintball-2x.jpg 2x"
-        class="block_image"
-        alt="Мальчики в лесу в камуфляжных костюмах и защитных масках. Целятся из пейнтобольных ружей в камеру"
-    >
-  </picture>
+  <div class="holder horizontal_photo_holder">
+    <picture>
+      <source srcset="images/photo/paintball.jpg 1x, images/photo/paintball-2x.jpg 2x" media="(max-width: 1280px) ">
+      <img
+          src="images/photo/wide/paintball.jpg"
+          srcset="images/photo/wide/paintball.jpg 1x, images/photo/wide/paintball-2x.jpg 2x"
+          class="block_image"
+          alt="Мальчики в лесу в камуфляжных костюмах и защитных масках. Целятся из пейнтобольных ружей в камеру"
+      >
+    </picture>
+  </div>
   <div class="photo_caption_wrapper">
     <p class="photo_caption"><span class="photo_caption_title">Пейнтбол.</span> Полезная игра
       <span class="nobr">в «стрелялки»:</span> дети двигаются,
       учатся работать в команде. Каждому игроку выдаём средства защиты: маски <span class="nobr">и костюмы</span>
     </p>
   </div>
-  <picture>
-    <source srcset="images/photo/pool.jpg 1x, images/photo/pool-2x.jpg 2x" media="(max-width: 1280px) ">
-    <img
-        src="images/photo/wide/pool.jpg"
-        srcset="images/photo/wide/pool.jpg 1x, images/photo/wide/pool-2x.jpg 2x"
-        class="block_image"
-        alt="Дети купаются в бассейне"
-    >
-  </picture>
+  <div class="holder horizontal_photo_holder">
+    <picture>
+      <source srcset="images/photo/pool.jpg 1x, images/photo/pool-2x.jpg 2x" media="(max-width: 1280px) ">
+      <img
+          src="images/photo/wide/pool.jpg"
+          srcset="images/photo/wide/pool.jpg 1x, images/photo/wide/pool-2x.jpg 2x"
+          class="block_image"
+          alt="Дети купаются в бассейне"
+      >
+    </picture>
+  </div>
   <div class="photo_caption_wrapper">
     <p class="photo_caption"><span class="photo_caption_title">Плавание.</span> Дети учатся плавать
       <span class="nobr">и купаются</span> <span class="nobr">в жару.</span>
@@ -563,11 +614,13 @@
     <p class="photo_caption application_caption">
       <span class="photo_caption_title single_line">Музыка</span>
       Дети учатся петь <span class="nobr">в хоре.</span>
-      <span class="nobr">На финале</span> смены, <span class="nobr">у костра,</span>
-      весь лагерь поёт песни <span class="nobr">о лагере.</span> После смены многие записываются
+      <span class="nobr">На финале</span> смены все собираются <span class="nobr">у костра</span>
+      <span class="nobr">и поют</span> песни <span class="nobr">о лагере.</span>
+      После смены многие записываются
       <span class="nobr">в кружок</span> гитары <span class="nobr">во дворце</span> творчества
     </p>
     <picture>
+      <source srcset="images/guitar-girl-small.jpg 1x, images/guitar-girl-small-x2.jpg 2x" media="(max-width: 600px) ">
       <source srcset="images/guitar-girl.jpg 1x, images/guitar-girl-2x.jpg 2x" media="(max-width: 1280px) ">
       <img
           src="images/wide/guitar-girl.jpg"
@@ -597,15 +650,17 @@
 
 <div class="block_with_background robotics">
   <div class="content_wrapper robotics_section">
-    <picture>
-      <source srcset="images/photo/robotics.jpg 1x, images/photo/robotics-2x.jpg 2x" media="(max-width: 1280px) ">
-      <img
-          src="images/photo/wide/robotics.jpg"
-          srcset="images/photo/wide/robotics.jpg 1x, images/photo/wide/robotics-2x.jpg 2x"
-          class="block_image"
-          alt="Мальчик с недостроенной машинкой из лего. Перед ним коробка с деталями на всю площадь стола. В ней по ячейкам разложены колёса, шестерёнки, перемычки и другие элементы."
-      >
-    </picture>
+    <div class="holder horizontal_photo_holder">
+      <picture>
+        <source srcset="images/photo/robotics.jpg 1x, images/photo/robotics-2x.jpg 2x" media="(max-width: 1280px) ">
+        <img
+            src="images/photo/wide/robotics.jpg"
+            srcset="images/photo/wide/robotics.jpg 1x, images/photo/wide/robotics-2x.jpg 2x"
+            class="block_image"
+            alt="Мальчик с недостроенной машинкой из лего. Перед ним коробка с деталями на всю площадь стола. В ней по ячейкам разложены колёса, шестерёнки, перемычки и другие элементы."
+        >
+      </picture>
+    </div>
     <div class="photo_caption_wrapper">
       <p class="photo_caption"><span class="photo_caption_title">Робототехника.</span> <span class="nobr">Под руководством</span>
         педагога дети
@@ -620,9 +675,9 @@
 
 <div class="teachers_section">
   <div class="content_wrapper">
-    <h3 class="content_title">
+    <h2 class="content_title">
       <span class="nobr">С детьми</span> занимаются педагоги <span class="nobr">и вожатые</span>
-    </h3>
+    </h2>
     <div class="teachers_section_description">
       <div class="leader_description">
         <p class="photo_caption"><span class="photo_caption_title"><span class="nobr">Вожатый —</span>
@@ -635,7 +690,7 @@
       </div>
       <div class="teacher_description">
         <p class="photo_caption">
-        <span class="photo_caption_title single_line">
+        <span class="photo_caption_title">
           <span class="nobr">Педагог —</span> наставник
           <span class="nobr">и воспитатель.</span>
         </span>
@@ -647,8 +702,6 @@
         </p>
       </div>
     </div>
-    <p class="leader_name">Иван, вожатый</p>
-    <p class="teacher_name">Нина Альбертовна, педагог</p>
     <picture>
       <source srcset="images/teachers.png 1x, images/teachers-2x.png 2x" media="(max-width: 1280px) ">
       <img
@@ -658,20 +711,22 @@
           alt="Фото вожатого и педагога"
       >
     </picture>
+    <div class="teacher_names_holder">
+      <p class="leader_name">Иван, вожатый</p>
+      <p class="teacher_name">Нина Альбертовна, педагог</p>
+    </div>
   </div>
 </div>
 
 <div class="safety_section">
   <div class="content_wrapper">
-    <h3 class="content_title">
-      Дети отдыхают <span class="nobr">в безопасности</span>
-    </h3>
+    <h2 class="content_title">Дети отдыхают <span class="nobr"> в безопасности </span></h2>
     <div class="safety_features">
       <div class="mosquito">
         <div class="mosquito_icon"></div>
-        <h4 class="safety_feature_title">
+        <h3 class="safety_feature_title">
           <span class="nobr">Без насекомых</span>
-        </h4>
+        </h3>
         <p class="safety_feature_text">
           Перед открытием обрабатываем территорию лагеря
           <span class="nobr">от насекомых</span> <span class="nobr">и грызунов.</span>
@@ -680,9 +735,9 @@
 
       <div class="first_aid">
         <div class="first_aid_icon"></div>
-        <h4 class="safety_feature_title">
+        <h3 class="safety_feature_title">
           <span class="nobr">Под контролем</span> медиков
-        </h4>
+        </h3>
         <p class="safety_feature_text">
           <span class="nobr">В лагере</span> круглосуточно работает медпункт. Медстраховку оформляем детям
           бесплатно.
@@ -693,9 +748,9 @@
 
       <div class="guard">
         <div class="guard_icon"></div>
-        <h4 class="safety_feature_title">
+        <h3 class="safety_feature_title">
           <span class="nobr">Под охраной</span>
-        </h4>
+        </h3>
         <p class="safety_feature_text">
           Лагерь огорожен, дежурит охрана. Есть система оповещения МЧС: спасатели приедут
           <span class="nobr">за 5 минут.</span>
@@ -705,10 +760,10 @@
   </div>
 </div>
 
-<div class="map_section">
-  <h3 class="content_title">
-    <span class="nobr">В 10 км</span> <span class="nobr">от Йошкар-Олы</span>
-  </h3>
+<div class="map_section" id="location">
+  <h2 class="content_title">
+    <span class="nobr">В 11 км</span> <span class="nobr">от Йошкар-Олы</span>
+  </h2>
   <p class="content_text">
     <span class="nobr">ул. Мира,</span> 9а/10, <span class="nobr">д. Сенькино,</span>
     <br>
@@ -719,26 +774,28 @@
     на автобусе бесплатно
   </div>
   <div class="map_wrapper">
-    <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad84de8818c95ac09a68b72c1d14a44943f0a54d0c1a2e7de847c4798880def14&amp;source=constructor"></iframe>
+    <iframe class="map_google"
+      src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d20861.584601488034!2d47.873933120854!3d56.66042756066444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4159eb6a9b625503%3A0xeef147546dcf7042!2z0JTQstC-0YDQtdGGINC80L7Qu9C-0LTQtdC20Lgg0KDQtdGB0L_Rg9Cx0LvQuNC60Lgg0JzQsNGA0LjQuSDQrdC7LCDQl9C10LvQtdC90LDRjyDRg9C70LjRhtCwLCDQmdC-0YjQutCw0YAt0J7Qu9Cw!3m2!1d56.6402177!2d47.8496258!4m5!1s0x4159eabea9ae3901%3A0x12fef4d408880591!2z0KDQsNC00YPQttC90YvQuSwg0KDQtdGB0L8uINCc0LDRgNC40Lkg0K3QuywgNDI1MjIw!3m2!1d56.667539999999995!2d47.931649199999995!5e0!3m2!1sru!2sru!4v1592398111988!5m2!1sru!2sru"
+      frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+    ></iframe>
   </div>
   <div class="map_details">
-    <h4 class="map_details_name">
+    <h3 class="map_details_name">
       <span class="nobr">Как добраться</span>
-    </h4>
+    </h3>
     <div class="by_car">
-      <h5 class="map_details_title">
+      <h4 class="map_details_title">
         <span class="nobr">На машине</span>
-      </h5>
+      </h4>
       <p class="map_details_subtitle">
         <span class="nobr">15 минут</span> <span class="nobr">от Дворца</span> творчества детей
-        <span class="nobr">и молодёжи</span>
+        <span class="nobr">и молодёжи —</span> <span class="nobr">без учёта</span> пробок
       </p>
     </div>
     <div class="by_bus">
-      <h5 class="map_details_title">
+      <h4 class="map_details_title">
         <span class="nobr">На автобусе</span>
-      </h5>
+      </h4>
       <p class="map_details_subtitle">
         <span class="nobr">25 минут</span>
         <span class="nobr">от автовокзала</span>
@@ -746,21 +803,23 @@
       <p class="map_details_description">
         Рейс <span class="nobr">«Йошкар-Ола —</span> Шойбулак» ходит каждые полчаса.
         <br class="map_description_transfer">
-        Остановка у деревни Сенькино
+        Остановка <span class="nobr">у деревни</span> Сенькино
       </p>
     </div>
   </div>
   <div class="map_section_spot">
-    Довезём ребёнка<br>
-    до лагеря на автобусе<br>
-    бесплатно
+    <div class="text">
+      Довезём ребёнка<br>
+      до лагеря <span class="nobr">на автобусе</span><br>
+      бесплатно
+    </div>
   </div>
 </div>
 
-<div class="block_with_background girl_jumping_wrapper">
+<div class="block_with_background girl_jumping_wrapper" id="faq">
   <div class="faq_section">
     <div class="content_wrapper">
-      <h3 class="content_title">Ответы <span class="nobr">на популярные</span> вопросы</h3>
+      <h2 class="content_title faq_section_title">Ответы <span class="nobr">на популярные</span> вопросы</h2>
       <div class="questions_and_docs">
         <div class="questions">
           <p class="question_title first">
@@ -924,10 +983,10 @@
     </div>
   </div>
 
-  <div class="mobile_footer_wrapper">
+  <div class="mobile_footer_wrapper" id="buyTicket">
     <div class="order_section">
-      <h3 class="content_title"><span class="nobr">10 дней</span> отдыха <span class="nobr">за 9 500 ₽</span>
-      </h3>
+      <h2 class="content_title"><span class="nobr">10 дней</span> отдыха <span class="nobr">за 9 500 ₽</span>
+      </h2>
       <p class="content_text">
         <span class="nobr">В стоимость</span> также входит:
       </p>
@@ -963,19 +1022,21 @@
                 alt=""
         >
       </picture>
-      <div class="jumping_girl_shadow"></div>
     </div>
     <div class="content_wrapper footer_section">
       <div class="horizontal_line"></div>
       <div class="phones_wrapper">
-        <div>
+        <div class="footer_link_wrapper">
           <a href="http://dtdim.org/" target="_blank" class="copyright link">
             Проект Дворца творчества детей
-            <span class="nobr">и молодёжи</span> Республики <span class="nobr">Марий Эл</span>
+            <span class="nobr">и молодёжи</span> <span class="nobr">Республики Марий Эл</span>
           </a>
         </div>
         <div class="phone_details">
-          <a class="phone not_underlined">
+          <a class="phone not_underlined" href="tel:78362425111">
+            <span class="nobr">(8362) 42-51-11</span>
+          </a>
+          <a class="phone not_underlined desktop_phone">
             <span class="nobr">(8362) 42-51-11</span>
           </a>
           <span class="call_details"><span class="nobr">По будням</span> <span class="nobr">с 9</span> <span class="nobr">до 18</span></span>
