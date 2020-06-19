@@ -2302,11 +2302,15 @@ img
         margin-top: -23px;
     }
 
+    .footer_link_wrapper
+    {
+        margin: 0 0 2px;
+    }
+
     .copyright, .copyright span
     {
         font-size: 16px;
         line-height: 21px;
-        margin: 0 0 1px;
     }
 
     .phones_wrapper
@@ -2735,9 +2739,9 @@ img
     /* Spots */
     .purple_spot
     {
-        width: 750px;
-        top: -90px;
-        transform: translateX(0.4%);
+        width: 860px;
+        transform: translateX(-71.9%);
+        top: -113px;
     }
 
     .yellow_spot
@@ -3031,6 +3035,11 @@ img
         display: none;
     }
 
+    .purple_spot
+    {
+        transform: translateX(-77.9%);
+    }
+
     .shifts_section
     {
         padding-bottom: 25px;
@@ -3222,7 +3231,8 @@ img
 
     .safety_section .content_title
     {
-        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .teachers_section .photo_caption
@@ -3490,7 +3500,7 @@ img
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
-        margin: 0 0 25px;
+        margin: 0 0 21px;
     }
 
     .developers
@@ -3525,7 +3535,9 @@ img
 
     .teachers_section .content_title
     {
-        max-width: 100%;
+        max-width: 94%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .vk_link
@@ -4053,7 +4065,7 @@ img
 
     .call_details
     {
-        margin: 0 0 20px;
+        margin: 0 0 22px;
     }
 
     .footer_link_wrapper
